@@ -12,33 +12,38 @@ const CartItem = ({ item }) => {
   }, [quantity]);
 
   return (
-    <tr className="cart-item">
-      <td>
-        <div className="cart-product-image">
-          <img src={item.image} alt={item.title} />
-        </div>
-      </td>
-      <td>{item.title}</td>
-      <td> <b className="price">৳ </b>{item.price}</td>
-      <td>
+    <div className="cart-item-row">
+      <div className="cart-col cart-image-col">
+        <img src={item.image} alt={item.title} />
+      </div>
+      <div className="cart-col cart-title-col">{item.title}</div>
+      <div className="cart-col cart-price-col">
+        <span className="mobile-label">Price:</span>
+        <b className="price">৳ {item.price}</b>
+      </div>
+      <div className="cart-col cart-quantity-col">
+        <span className="mobile-label">Qty:</span>
         <div className="quantity-buttons">
-          <button onClick={() => setQuantity(q => Math.max(1, q - 1))}>➖</button>
+          <button onClick={() => setQuantity(q => Math.max(1, q - 1))}>−</button>
           <input
             type="number"
             value={quantity}
             min="1"
             onChange={e => setQuantity(Math.max(1, Number(e.target.value)))}
           />
-          <button onClick={() => setQuantity(q => q + 1)}>➕</button>
+          <button onClick={() => setQuantity(q => q + 1)}>+</button>
         </div>
-      </td>
-      <td> <b className="price">৳ </b>{item.price * quantity}</td>
-      <td>
+      </div>
+      <div className="cart-col cart-subtotal-col">
+         <span className="mobile-label">Subtotal:</span>
+         <b className="price">৳ {item.price * quantity}</b>
+      </div>
+      <div className="cart-col cart-action-col">
         <button className="btn-remove" onClick={() => removeFromCart(item.id)}>
-          ❌
+          ✕
         </button>
-      </td>
-    </tr>
+      </div>
+    </div>
   );
 };
 

@@ -1,11 +1,14 @@
 "use client";
 import "./css/ProductCard.css";
+import { useRouter } from "next/navigation";
 
 const ProductCard = ({ product, onAddToCart, isLoggedIn }) => {
+  const router = useRouter();
+
   const handleAddClick = () => {
     if (!isLoggedIn) {
       alert("Please Login User !");
-      window.location.href = "/login"; 
+      router.push("/login"); 
       return;
     }
 
