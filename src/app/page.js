@@ -13,17 +13,17 @@ export default async function HomePage() {
           <div className={styles.heroContent}>
             <div className={styles.badge}>v2.0 Now Live</div>
             <h1 className={styles.heroHeading}>
-              Experience the Future of <span className={styles.gradientText}>Interactive Shopping</span>
+              Effortless Shopping, <span className={styles.gradientText}>Redefined.</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Dive into our curated ecosystem of premium products. Engineered for speed, designed for elegance, and built entirely for you.
+              Discover premium products delivered lightning-fast. Designed for speed, built for elegance, and curated just for you.
             </p>
             <div className={styles.heroActions}>
               <Link href="/shop" prefetch={true}>
-                <button className={styles.btnHero}>Start Your Journey</button>
+                <button className={styles.btnHero}>Shop Collection</button>
               </Link>
               <Link href="/cart" prefetch={true}>
-                <button className={styles.btnSecondary}>View Cart</button>
+                <button className={styles.btnSecondary}>Your Cart</button>
               </Link>
             </div>
           </div>
@@ -31,11 +31,11 @@ export default async function HomePage() {
           <div className={styles.heroVisual}>
             <div className={styles.glassPaneTop}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-              <span>Premium Quality</span>
+              <span>Verified Quality</span>
             </div>
             <div className={styles.glassPaneMain}></div>
             <div className={styles.glassPaneBottom}>
-              <span className={styles.dot}></span> Secure Checkout
+              <span className={styles.dot}></span> Secure Payments
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default async function HomePage() {
       <section className={styles.sectionWrapper}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Why Choose Us?</h2>
-          <p className={styles.sectionSubtitle}>We don't just sell products. We deliver a flawless, end-to-end commerce experience.</p>
+          <p className={styles.sectionSubtitle}>We deliver more than just products. We offer a flawless commerce experience.</p>
         </div>
         
         <div className={styles.bentoGrid}>
@@ -52,8 +52,8 @@ export default async function HomePage() {
             <div className={styles.iconWrapper}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             </div>
-            <h3 className={styles.cardTitle}>Lightning Fast Delivery</h3>
-            <p className={styles.cardDesc}>We've optimized our logistics network to get your items from our warehouse to your front door at breakneck speeds. No more waiting weeks for your favorite items.</p>
+            <h3 className={styles.cardTitle}>Fast Delivery</h3>
+            <p className={styles.cardDesc}>Our logistics network guarantees rapid delivery from our warehouse directly to your door. No delays.</p>
           </article>
           
           <article className={styles.bentoCard}>
@@ -61,7 +61,7 @@ export default async function HomePage() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             </div>
             <h3 className={styles.cardTitle}>Bank-Grade Security</h3>
-            <p className={styles.cardDesc}>Powered by Stripe, your transactions are shielded via military-grade encryption.</p>
+            <p className={styles.cardDesc}>Powered by Stripe, your transactions are protected with military-grade encryption.</p>
           </article>
 
           <article className={styles.bentoCard}>
@@ -69,7 +69,7 @@ export default async function HomePage() {
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </div>
             <h3 className={styles.cardTitle}>Curated Excellence</h3>
-            <p className={styles.cardDesc}>We hand-pick every item to guarantee unparalleled quality and satisfaction.</p>
+            <p className={styles.cardDesc}>We hand-pick every item to ensure the highest standards of quality and design.</p>
           </article>
 
           <article className={`${styles.bentoCard} ${styles.bentoWide}`}>
@@ -79,7 +79,7 @@ export default async function HomePage() {
               </div>
               <div className={styles.bentoWideText}>
                 <h3 className={styles.cardTitle}>24/7 Global Support</h3>
-                <p className={styles.cardDesc}>Whether it's 3 PM or 3 AM, our dedicated support engineers are on standby.</p>
+                <p className={styles.cardDesc}>Whether it's 3 PM or 3 AM, our dedicated support team is always available to help.</p>
               </div>
             </div>
           </article>
@@ -89,7 +89,7 @@ export default async function HomePage() {
       <section className={`${styles.sectionWrapper} ${styles.featuredProducts}`}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Trending Collection</h2>
-          <p className={styles.sectionSubtitle}>Discover the products everyone is talking about this week.</p>
+          <p className={styles.sectionSubtitle}>Explore the products everyone is talking about.</p>
         </div>
         
         <div className={styles.storefrontOverride}>
@@ -98,7 +98,7 @@ export default async function HomePage() {
         
         <div className={styles.viewAllWrapper}>
           <Link href="/shop" prefetch={true}>
-            <button className={styles.btnHero}>Explore Entire Catalog ➔</button>
+            <button className={styles.btnHero}>View All Products ➔</button>
           </Link>
         </div>
       </section>
@@ -110,7 +110,7 @@ export default async function HomePage() {
         <div className={styles.testimonialWrapper}>
           <div className={styles.testimonialCard}>
             <div className={styles.stars}>★★★★★</div>
-            <p className={styles.quote}>"The interface is flawlessly smooth. Shipping was surprisingly fast. I honestly won't shop anywhere else now."</p>
+            <p className={styles.quote}>"The interface is incredibly smooth. Shipping was surprisingly fast. I won't shop anywhere else."</p>
             <div className={styles.authorProfile}>
               <div className={styles.avatar}>N</div>
               <div className={styles.authorInfo}>
@@ -122,7 +122,7 @@ export default async function HomePage() {
           
           <div className={styles.testimonialCard}>
             <div className={styles.stars}>★★★★★</div>
-            <p className={styles.quote}>"Glassmorphism done right! Navigating this store feels like browsing through a futuristic magazine."</p>
+            <p className={styles.quote}>"Outstanding quality! Navigating this store feels like browsing a modern, premium magazine."</p>
             <div className={styles.authorProfile}>
               <div className={styles.avatar}>R</div>
               <div className={styles.authorInfo}>
@@ -134,7 +134,7 @@ export default async function HomePage() {
 
           <div className={styles.testimonialCard}>
             <div className={styles.stars}>★★★★★</div>
-            <p className={styles.quote}>"I've never seen an e-commerce platform that loads this fast. Highly recommended secure buying experience."</p>
+            <p className={styles.quote}>"I've never seen a store load this fast. Highly recommended for a secure buying experience."</p>
             <div className={styles.authorProfile}>
                <div className={styles.avatar} style={{background: 'var(--brand-orange)'}}>R</div>
               <div className={styles.authorInfo}>
@@ -150,7 +150,7 @@ export default async function HomePage() {
         <div className={styles.footerGrid}>
           <div className={styles.footerBrand}>
             <h2>Raihan Interactive</h2>
-            <p>Elevating the standard of digital commerce through rigorous design and unparalleled performance.</p>
+            <p>Elevating digital commerce through minimal design and fast performance.</p>
           </div>
           <div className={styles.footerLinks}>
             <h3>Platform</h3>
@@ -162,7 +162,7 @@ export default async function HomePage() {
             <h3>Legal</h3>
             <Link href="/">Privacy Policy</Link>
             <Link href="/">Terms of Service</Link>
-            <Link href="/">Refund Chain</Link>
+            <Link href="/">Refund Policy</Link>
           </div>
         </div>
         
