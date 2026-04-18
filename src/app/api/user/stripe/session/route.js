@@ -41,7 +41,7 @@ export async function POST(req) {
                     currency: "bdt", 
                     product_data: {
                         name: product.title,
-                        images: product.image ? [product.image] : [],
+                        images: product.image && product.image.startsWith("http") ? [product.image] : [],
                     },
                     unit_amount: Math.round(product.price * 100), 
                 },
