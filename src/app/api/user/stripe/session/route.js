@@ -49,12 +49,14 @@ export async function POST(req) {
             };
         });
 
+        const origin = req.headers.get("origin") || process.env.NEXTAUTH_URL || "http://localhost:3000";
+
         const session = await stripe.checkout.sessions.create({
             line_items: lineItems,
             mode: "payment",
             payment_method_types: ["card"],
-            success_url: process.env.NEXTAUTH_URL + "/",
-            cancel_url: process.env.NEXTAUTH_URL + "/cart",
+            success_url: `${origin}/`,
+            cancel_url: `${origin}/cart`,
             client_reference_id: user.id.toString(),
             customer_email: user.email,
             billing_address_collection: "required",
