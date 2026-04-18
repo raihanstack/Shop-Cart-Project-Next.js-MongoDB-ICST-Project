@@ -6,7 +6,6 @@ import ProductCard from "@/app/component/ProductCard";
 import { useCart } from "@/app/component/CartContext";
 import PageSwitch from "@/app/component/PageSwitch";
 import { useSearchParams } from "next/navigation";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const getProduct = async (page) => {
   try {
@@ -46,10 +45,15 @@ const Shop = () => {
   }, [page]);
 
   return (
-  <div className="bg-light text-dark min-vh-100">
-    <div className="container py-5">
+    <div style={{ padding: "4rem 2rem", width: "100%", maxWidth: "1200px", margin: "0 auto", minHeight: "100vh" }}>
       {products.length > 0 ? (
-        <div className="row g-4">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gap: "2rem",
+          }}
+        >
           {products.map((product) => (
             <ProductCard
               key={product._id}
@@ -60,14 +64,15 @@ const Shop = () => {
           ))}
         </div>
       ) : (
-        <p className="text-center">No products available.</p>
+        <p style={{ textAlign: "center", fontSize: "1.2rem", marginTop: "2rem", color: "var(--foreground)" }}>
+          No products available.
+        </p>
       )}
 
-      <div className="mt-4 d-flex justify-content-center">
+      <div style={{ marginTop: "3rem", display: "flex", justifyContent: "center" }}>
         <PageSwitch totalPages={totalPages} currentPage={page} pathname="/shop" />
       </div>
     </div>
-  </div>
   );
 };
 

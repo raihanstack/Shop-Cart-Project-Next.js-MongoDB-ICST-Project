@@ -1,30 +1,34 @@
 .ingredient {
-  background-color: #fff;
-  border: 1px solid #000; 
-  border-radius: 15px;
-  box-shadow: 0 0 5px #000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
-  padding: 1rem;
-  font-family: arial;
-  margin:5px;
+  padding: 1.5rem;
+  font-family: var(--font-inter), sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .ingredient:hover {
-  transform: translateY(-5px); 
-  background-color: #ff6600;
-  box-shadow:none;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 106, 0, 0.3);
 }
 
 .ingredient__image {
-  width: 115%;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 1;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--surface-color);
 }
 
 .ingredient__image img {
@@ -32,61 +36,53 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s cubic-bezier(0.5, 0, 0.2, 1); 
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .ingredient__image:hover img {
-  transform: scale(1.5); 
+  transform: scale(1.1);
 }
 
+.ingredient__title {
+  margin-bottom: auto; /* Pushes the price and button to the bottom */
+}
 
 .ingredient__title h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #000; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .ingredient__content .price {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #008000; 
+  color: var(--brand-orange);
+  margin-bottom: 1.5rem;
 }
 
 .btn-white {
-  background-color: #ff6600; 
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
+  background-color: transparent;
+  width: 100%;
+  color: var(--foreground);
+  border: 2px solid var(--border-color);
+  padding: 0.8rem 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid #000;
 }
 
 .btn-white:hover {
-  background-color: #000; 
-  color: #fff; 
-  border-color: #fff;
+  background-color: var(--brand-orange);
+  color: #fff;
+  border-color: var(--brand-orange);
 }
 
-@media (max-width: 768px) {
-  .ingredient {
-    padding: 0.5rem;
-  }
-
-  .ingredient__image {
-    height: 200px;
-  }
-
-  .ingredient__title h3 {
-    font-size: 1rem;
-  }
-
-  .ingredient__content .price {
-    font-size: 0.95rem;
-  }
+/* Base Styles */
+figure {
+  margin: 0;
+  padding: 0;
 }
