@@ -24,11 +24,14 @@
 
 .ingredient__image {
   width: 100%;
-  aspect-ratio: 1;
+  height: 200px;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 1.5rem;
   background-color: var(--surface-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ingredient__image img {
@@ -44,14 +47,14 @@
 }
 
 .ingredient__title {
-  margin-bottom: auto; /* Pushes the price and button to the bottom */
+  /* No margin applied here -> grouped tight with price */
 }
 
 .ingredient__title h3 {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--foreground);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
 }
 
@@ -60,6 +63,11 @@
   font-weight: 700;
   color: var(--brand-orange);
   margin-bottom: 1.5rem;
+}
+
+.ingredient__btn {
+  margin-top: auto; /* Pushes the button gracefully to the bottom */
+  width: 100%;
 }
 
 .btn-white {
@@ -85,4 +93,6 @@
 figure {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
