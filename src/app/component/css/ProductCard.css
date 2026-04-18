@@ -8,7 +8,7 @@
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
-  padding: 1.5rem;
+  padding: 1rem; /* reduced overall padding */
   font-family: var(--font-inter), sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -27,7 +27,7 @@
   height: 200px;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem; /* Drastically reduced gap between image and text */
   background-color: var(--surface-color);
   display: flex;
   align-items: center;
@@ -48,21 +48,22 @@
 
 .ingredient__title {
   /* No margin applied here -> grouped tight with price */
+  margin-top: 0.2rem;
 }
 
 .ingredient__title h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--foreground);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem; /* Tightened gap below title */
   line-height: 1.4;
 }
 
 .ingredient__content .price {
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* slightly larger price for emphasis */
   font-weight: 700;
   color: var(--brand-orange);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* reduced gap before button */
 }
 
 .ingredient__btn {
