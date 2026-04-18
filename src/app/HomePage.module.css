@@ -273,9 +273,8 @@
 /* === 2. BENTO BOX GRID === */
 .bentoGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(280px, auto);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   width: 100%;
 }
 
@@ -283,13 +282,14 @@
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  padding: 2.5rem;
-  border-radius: 30px;
+  padding: 3rem;
+  border-radius: 20px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  align-items: flex-start;
 }
 
 .bentoCard:hover {
@@ -298,21 +298,12 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-.bentoLarge {
-  grid-row: span 2;
-  justify-content: space-between;
-}
-
-.bentoWide {
-  grid-column: span 2;
-}
-
 .iconWrapper {
   width: 60px; height: 60px;
   background: linear-gradient(135deg, rgba(255,106,0,0.1) 0%, rgba(255,106,0,0.05) 100%);
   border: 1px solid rgba(255,106,0,0.2);
   color: var(--brand-orange);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,22 +311,14 @@
 }
 .iconWrapper svg { width: 28px; height: 28px; }
 
-.bentoFlex {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  height: 100%;
-}
-.bentoFlex .iconWrapper { margin: 0; width: 80px; height: 80px; flex-shrink: 0; }
-
 .cardTitle {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--foreground);
   margin-bottom: 1rem;
 }
 .cardDesc {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--foreground);
   opacity: 0.7;
   line-height: 1.6;
@@ -485,15 +468,10 @@
   .heroContent { display: flex; flex-direction: column; align-items: center; }
   .heroActions { justify-content: center; }
   .heroVisual { display: none; /* Hide 3D graphic on tablets for space */ }
-  .bentoGrid { grid-template-columns: repeat(2, 1fr); }
-  .bentoLarge { grid-row: auto; }
 }
 
 @media (max-width: 768px) {
   .bentoGrid { grid-template-columns: 1fr; }
-  .bentoWide { grid-column: span 1; }
-  .bentoFlex { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-  .bentoFlex .iconWrapper { width: 60px; height: 60px; }
   
   .footerGrid { grid-template-columns: 1fr; gap: 2.5rem; }
   .footerBottom { flex-direction: column; text-align: center; justify-content: center; }
